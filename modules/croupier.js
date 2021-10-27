@@ -1,13 +1,18 @@
 class Croupier {
-    constructor(wysokosc, szerokosc) {
+    constructor() {
       this.deck = ["As", "Jopel", "Dama"]
     }
-    draw() {
+    drawCards() {
+      const cardsDeck = []
+      for (let i = 0; i < this.deck.length - 1; i++) {
         const index = Math.floor(Math.random() * this.deck.length);
-        const card = this.deck[index];
-        return card
+        if (cardsDeck.includes(this.deck[index])) {
+          i--
+        } else {
+          const card = this.deck[index];
+          cardsDeck.push(card)
+        }
+      }
+      return cardsDeck
     }
 }
-
-  const test = new Croupier
-  test.draw() 
