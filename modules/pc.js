@@ -1,11 +1,8 @@
-class Cpu {
+class Cpu extends Croupier {
     constructor() {
-        this.croupier = new Croupier
-        this.CpuCards = this.croupier.cards
+        super()
     }
     one() {
-        console.log(this.CpuCards);
+        console.log(super.deck);
     }
 }
-const cpu = new Cpu
-cpu.one()

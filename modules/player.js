@@ -1,11 +1,10 @@
-class Player {
+class Player extends Croupier {
     constructor() {
-        this.croupier = new Croupier
-        this.playerCards = this.croupier.cards
+        super()
+        this.cards = super.deck
     }
     one() {
-        console.log(this.playerCards)
-       
+        console.log(this.cards)
     }
 }
 
