@@ -1,10 +1,11 @@
 class Player {
     constructor() {
         this.croupier = new Croupier
-        this.card  = this.croupier.drawCards()
+        this.playerCards = this.croupier.cards
     }
     one() {
-        console.log(this.card);
+        console.log(this.playerCards)
+       
     }
 }
 
